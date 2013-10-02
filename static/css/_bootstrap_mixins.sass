@@ -1,0 +1,17 @@
+@mixin navbar-height($height)
+  height: $height
+  .navbar-brand
+    $brand-pad: ($height - 20px) / 2
+    height: $height
+    padding-top: $brand-pad
+  .input-group
+    $standard-height: 50px - 2 * 8px
+    $input-group-pad: ($height - $standard-height) / 2
+    margin-top: $input-group-pad
+    margin-bottom: $input-group-pad
+
+@media (min-width: 768px)
+  .jj-navbar-huge
+    @include navbar-height(80px)
+    padding-left: 60px
+    padding-right: 60px

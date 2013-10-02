@@ -1,0 +1,173 @@
+$grayLight: #ccc
+$placeholderText: $grayLight
+
+@mixin placeholder($color: $placeholderText)
+  &:-moz-placeholder
+    color: $color
+  &:-ms-input-placeholder
+    color: $color
+  &::-webkit-input-placeholder
+    color: $color
+
+@mixin textHide
+  text-index: -10000px
+  overflow: hidden
+  font-size: 0
+  color: transparent
+
+// Clearfix
+@mixin clearfix
+  *zoom: 1
+  &:before,
+  &:after
+    display: table
+    content: "" 
+    line-height: 0
+  &:after
+    clear: both
+
+@mixin border-radius-base($r)
+  -webkit-border-radius: $r
+  -moz-border-radius: $r
+  -o-border-radius: $r
+  border-radius: $r
+
+@mixin border-left-radius($r: 3px)
+  border-bottom-left-radius: $r
+  border-top-left-radius: $r
+
+@mixin border-right-radius($r: 3px)
+  border-bottom-right-radius: $r
+  border-top-right-radius: $r
+
+@mixin border-top-radius($r: 3px)
+  border-top-left-radius: $r
+  border-top-right-radius: $r
+
+@mixin border-bottom-radius($r: 3px)
+  border-bottom-left-radius: $r
+  border-bottom-right-radius: $r
+
+@mixin border-radius($r: 3px)
+  @include border-radius-base($r)
+
+@mixin transition($property, $duration)
+  -webkit-transition: $property $duration
+  -moz-transition: $property $duration
+  -o-transition: $property $duration
+  transition: $property $duration
+
+@mixin underline-box
+  position: relative
+  input, textarea
+    border: none
+    background: transparent
+    padding-bottom: 3px
+  &:before
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    border: 1px solid $bg * .8
+    content: ''
+    display: block
+    pointer-events: none
+    border-top: none
+    height: 3px
+    border-radius: 1px
+
+@mixin gradient_3($c1, $c2, $c3)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $c1), color-stop(.5, $c2), color-stop(1, $c3))
+  background-image: -webkit-linear-gradient(top, $c1 0%, $c2 50%, $c3 100%)
+  background-image: -moz-linear-gradient(top, $c1 0%, $c2 50%, $c3 100%)
+  background-image: -o-linear-gradient(top, $c1 0%, $c2 50%, $c3 100%)
+  background-image: -ms-linear-gradient(top, $c1 0%, $c2 50%, $c3 100%)
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr=@{c1}, endColorstr=@{c3})"
+
+@mixin gradient_only($c1, $c2)
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, $c1), color-stop(1, $c2))
+  background-image: -webkit-linear-gradient(top, $c1 0%, $c2 100%)
+  background-image: -moz-linear-gradient(top, $c1 0%, $c2 100%)
+  background-image: -o-linear-gradient(top, $c1 0%, $c2 100%)
+  background-image: -ms-linear-gradient(top, $c1 0%, $c2 100%)
+  filter: "progid:DXImageTransform.Microsoft.gradient(enabled='true', startColorstr=@{c1}, endColorstr=@{c2})"
+
+@mixin gradient($c1, $c2)
+  background-color: $c1
+  @include gradient_only($c1, $c2)
+
+@mixin standard-gradient($c, $amount: 10%)
+  $c1: lighten($c, $amount * .3)
+  $c2: darken( $c, $amount * .3)
+  @include gradient($c1, $c2)
+
+@mixin opacity($opacity)
+  opacity: $opacity
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacity * 100 + ")"
+
+@mixin box-shadow($shadows...)
+  -webkit-box-shadow: $shadows
+  -moz-box-shadow:    $shadows
+  -o-box-shadow:      $shadows
+  box-shadow:         $shadows
+
+@mixin drop-shadow($dist: 3px, $blur: 7px, $color: rgba(0, 0, 0, .4))
+  @include box-shadow(0px $dist $blur $color)
+
+@mixin top-bottom-shadow($size: 1px, $color: rgba(0, 0, 0, .15))
+  @include box-shadow(0 $size 0 $color, 0 -1 * $size 0 $color)
+
+@mixin inner-shadow($dist: 3px, $blur: 7px, $color: rgba(0, 0, 0, .4))
+  @include box-shadow(inset 0px $dist $blur $color)
+
+@mixin background-size($type)
+  background-size: $type
+  -webkit-background-size: $type
+  -moz-background-size: $type
+  -ms-behavior: url(/static/resources/backgroundsize.min.htc)
+
+@mixin transform($transformation)
+  -webkit-transform: $transformation
+  -moz-transform: $transformation
+  transform: $transformation
+
+@mixin rotate($angle)
+  @include transform(rotate($angle))
+
+@mixin antialiased
+  -webkit-font-smoothing: antialiased
+
+@mixin round-outline($width, $color)
+  @include box-shadow(0 0 0 $width $color)
+
+@mixin top-pointer($foreground, $background, $size, $offset)
+  position: relative
+  &:before, &:after
+    content: ''
+    display: block
+    position: absolute
+    left: 50%
+    border: solid transparent
+    border-top: none
+    bottom: 100%
+  &:before
+    border-width: $size + $offset
+    margin-left: -1 * ($size + $offset)
+    border-bottom-color: $background
+  &:after
+    border-width: $size
+    margin-left: -1 * $size
+    border-bottom-color: $foreground
+
+@mixin inside-bottom-border($width, $color, $type: solid)
+  position: relative
+  &:after
+    display: block
+    content: ''
+    border-bottom: $width $type $color
+    position: absolute
+    left: 0
+    right: 0
+    bottom: 0
+    z-index: 4
+

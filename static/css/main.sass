@@ -1,0 +1,55 @@
+@import mixins
+@import bootstrap_mixins
+@import btns
+
+$font: 'Source Sans Pro', 'Helvetica Neue', Helvetica, arial, sans-serif
+$font-headers: $font
+$danger-red: #d00
+$navbar-bg: #eee
+
+html, body
+  height: 100%
+
+body
+  font-family: $font
+
+h1, h2, h3, h4, h5, h6
+  font-family: $font
+  font-weight: bold
+
+h1
+  font-size: 28px
+
+.centered
+  text-align: center
+
+.contrast
+  color: $danger-red
+
+u
+  text-decoration: none
+  border-bottom: 2px solid
+
+.no-svg
+  .logo
+    background-image: url('../../img/logo.png')
+
+.jumbotron
+  h1
+    line-height: 1.2em
+    u
+      color: $danger-red
+
+.addthis_toolbox
+  max-width: 320px
+  margin: 20px auto
+
+@media (min-width: 992px)
+  .number-figure-huge
+    font-size: 96px
+    display: inline-block
+    margin-top: 20px
+
+@import homepage
+
+

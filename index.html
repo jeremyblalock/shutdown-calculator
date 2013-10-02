@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+
+<title>How Much Has the Government Shutdown Cost So Far?</title>
+
+<meta property='og:title' content='Contour'>
+
+<meta property='og:image' content='http://www.lastwordonnothing.com/wp-content/uploads/2011/05/Alarm_Clocks_20101107a.jpeg'>
+
+<meta property='og:type' content='website'>
+<meta property='og:site_name' content='Government Shutdown Cost Calculator'>
+<meta property='og:description' content='How Much Has the Government Shutdown Cost So Far?'>
+
+<meta name='description' content='See the realtime cost of the government shutdown, updated every second'>
+<meta http-equiv='cleartype' content='on'>
+
+<meta name='apple-mobile-web-app-capable' content='yes'>
+
+<!-- Responsive and mobile friendly stuff -->
+<meta name='HandheldFriendly' content='True'>
+<meta name='MobileOptimized' content='320'>
+<meta name='viewport' content='target-densitydpi=160dpi, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0'>
+
+<!-- Google fonts -->
+<link rel='shortcut icon' href='favicon.ico'>
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900' rel='stylesheet' type='text/css'>
+
+<!-- Stylesheets -->
+<link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' media='all'>
+<link rel='stylesheet' href='static/css/compiled/main.css' media='all'>
+
+<!--[if lt IE 9]>
+<script>
+<script src='/static/js/lib/html5shiv.js'></script>
+<script src='/static/js/lib/es5.js'></script>
+<script src='/static/js/lib/respond.min.js'></script>
+<![endif]-->
+
+
+</head>
+<body>
+  <div class='home-banner jumbotron' id='template-wrapper'>
+  </div>
+  <!-- AddThis Button BEGIN -->
+  <div class="addthis_toolbox addthis_default_style ">
+    <a class="addthis_button_facebook_like" fb:like:layout="button_count"></a>
+    <a class="addthis_button_tweet"></a>
+  </div>
+  <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+  <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-524c796c5edd34f7"></script>
+  <!-- AddThis Button END -->
+  <p class='centered'>Created by <a href='https://github.com/jeremyblalock' target='_blank'>jeremyblalock</a></p>
+<script type='text/template' id='banner-template'>
+  <h1 class='centered'>The U.S. Federal Government has been shut down for 
+    <u class='number-figure'><%= days %></u> day<%= days_pluralize %>,
+    <u class='number-figure'><%= hours %></u> hour<%= hours_pluralize %>,
+    <u class='number-figure'><%= minutes %></u> minute<%= minutes_pluralize %>,
+    <u class='number-figure'><%= seconds %></u> second<%= seconds_pluralize %> </h1>
+  <h1 class='centered'>and so far it has cost <br>
+    <u class='number-figure number-figure-huge'><%= cost %></u></h1>
+</script>
+<script src='/static/js/modernizr.min.js'></script>
+<script src='/static/js/jquery.js'></script>
+<script src='/static/js/underscore.min.js'></script>
+<script src='/static/js/underscore.string.js'></script>
+<script src='/static/js/homepage.js'></script>
+</body>
+</html>
