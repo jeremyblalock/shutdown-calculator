@@ -45,10 +45,15 @@ u
   margin: 20px auto
   > a
     width: 50%
-    padding: 20px
+    > div
+      margin: 10px
     &:first-child
       > div
         float: right
+
+.last-paragraph
+  padding-bottom: 40px
+  @include clearfix
 
 @media (min-width: 992px)
   .number-figure-huge
