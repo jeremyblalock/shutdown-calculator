@@ -3,7 +3,7 @@ $(document).ready(function() {
 
     var template = _.template($('#banner-template').html());
 
-    var startDate = new Date('2013-10-1 EDT');
+    var startDate = 1380600000000; //Math.abs(new Date('2013-10-1 EDT'));
 
     var SECONDS = 1000,
         MINUTES = SECONDS * 60,
@@ -29,8 +29,9 @@ $(document).ready(function() {
 
 
     function updateValues() {
-        var currentDate = new Date(),
+        var currentDate = Math.abs(new Date()),
             timeDiff = currentDate - startDate;
+        //console.log('=======>', currentDate, startDate, timeDiff);
         var days = Math.floor(timeDiff / DAYS),
             hours = Math.floor((timeDiff % DAYS) / HOURS),
             minutes = Math.floor((timeDiff % HOURS) / MINUTES),
