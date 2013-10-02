@@ -51,6 +51,8 @@ u {
 .addthis_toolbox {
   max-width: 320px;
   margin: 20px auto; }
+  .addthis_toolbox > a {
+    width: 50%; }
 
 @media (min-width: 992px) {
   .number-figure-huge {
