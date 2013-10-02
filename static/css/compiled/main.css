@@ -53,9 +53,9 @@ u {
   margin: 20px auto; }
   .addthis_toolbox > a {
     width: 50%; }
-    .addthis_toolbox > a > div {
+    .addthis_toolbox > a > * {
       margin: 10px; }
-    .addthis_toolbox > a:first-child > div {
+    .addthis_toolbox > a:first-child > * {
       float: right; }
 
 .last-paragraph {
