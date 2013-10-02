@@ -68,6 +68,11 @@ u {
   .last-paragraph:after {
     clear: both; }
 
+.greyed {
+  color: #aaaaaa; }
+  .greyed a {
+    color: inherit; }
+
 @media (min-width: 992px) {
   .number-figure-huge {
     font-size: 96px;
