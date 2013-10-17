@@ -33,13 +33,6 @@
 <link rel='stylesheet' href='http://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css' media='all'>
 <link rel='stylesheet' href='static/css/compiled/main.css' media='all'>
 
-<!--[if lt IE 9]>
-<script>
-<script src='/static/js/lib/html5shiv.js'></script>
-<script src='/static/js/lib/es5.js'></script>
-<script src='/static/js/lib/respond.min.js'></script>
-<![endif]-->
-
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -54,13 +47,10 @@
 </head>
 <body>
   <div class='home-banner jumbotron' id='template-wrapper'>
-    <h1 class='centered'>The U.S. Federal Government has been shut down for 
-      <u class='number-figure'>&nbsp;&nbsp;&nbsp;</u> days,
-      <u class='number-figure'>&nbsp;&nbsp;&nbsp;</u> hours,
-      <u class='number-figure'>&nbsp;&nbsp;&nbsp;</u> minutes,
-      <u class='number-figure'>&nbsp;&nbsp;&nbsp;</u> seconds </h1>
-    <h1 class='centered'>and so far it has cost <br>
-      <u class='number-figure number-figure-huge'></u></h1>
+    <h1 class='centered'>The U.S. Federal Government was shut down for over
+      <u class='number-figure'>16</u> days,
+    <h1 class='centered'>and it's estimated to have cost <br>
+      <u class='number-figure number-figure-huge'>$4,802,916,667</u></h1>
   </div>
   <!-- AddThis Button BEGIN -->
   <div class="addthis_toolbox addthis_default_style ">
@@ -74,19 +64,6 @@
   <p class='centered last-paragraph'><iframe src="http://ghbtns.com/github-btn.html?user=jeremyblalock&repo=shutdown-calculator&type=fork"
     allowtransparency="true" frameborder="0" scrolling="0" width="62" height="20"></iframe></p>
   <p class='centered greyed last-paragraph'><small><a href='http://www.nbcnews.com/business/money-nothing-government-shutdown-costs-12-5-million-hour-8C11308802' target='_blank'>Sources</a></small></p>
-<script type='text/template' id='banner-template'>
-  <h1 class='centered'>The U.S. Federal Government has been shut down for 
-    <u class='number-figure'><%= days %></u> day<%= days_pluralize %>,
-    <u class='number-figure'><%= hours %></u> hour<%= hours_pluralize %>,
-    <u class='number-figure'><%= minutes %></u> minute<%= minutes_pluralize %>,
-    <u class='number-figure'><%= seconds %></u> second<%= seconds_pluralize %> </h1>
-  <h1 class='centered'>and so far it has cost <br>
-    <u class='number-figure number-figure-huge'><%= cost %></u></h1>
-</script>
 <script src='/static/js/modernizr.min.js'></script>
-<script src='/static/js/jquery.js'></script>
-<script src='/static/js/underscore.min.js'></script>
-<script src='/static/js/underscore.string.js'></script>
-<script src='/static/js/homepage.js'></script>
 </body>
 </html>
