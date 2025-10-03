@@ -1,5 +1,9 @@
 {
   "scripts": {
-    "start": "npx serve -l 4321 ./public"
+    "start": "npx serve -l 4321 ./public",
+    "build:css": "sass --no-source-map ./src/css/main.sass ./public/static/css/main.css --style=compressed"
+  },
+  "dependencies": {
+    "sass": "^1.93"
   }
 }
