@@ -1,9 +1,10 @@
+const COST_PER_HOUR = 13480392;
 
 $(document).ready(function() {
 
     var template = _.template($('#banner-template').html());
 
-    var startDate = 1380600000000; //Math.abs(new Date('2013-10-1 EDT'));
+    var startDate = +new Date('2025-10-01T00:01:00-04:00');
 
     var SECONDS = 1000,
         MINUTES = SECONDS * 60,
@@ -52,6 +53,6 @@ $(document).ready(function() {
     }
 
     updateValues();
-    window.setInterval(updateValues, 1000)
+    window.setInterval(updateValues, 40)
 
 });
